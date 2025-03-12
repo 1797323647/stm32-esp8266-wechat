@@ -75,9 +75,23 @@
 .ai-input-container {
   display: flex;
   align-items: center;
-  margin-bottom: 20rpx;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-
+/* 下拉框样式 */
+.model-selected {
+  width: 30rpx; /* 调整宽度，可根据需要修改 */
+  height: 60rpx;
+  padding: 10rpx 20rpx;
+  border: 2rpx solid #ff00bf57; /* 使用您定义的颜色 */
+  border-radius: 10rpx;
+  background-color: #ffffff; /* 白色背景 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 文字和箭头分布两端 */
+  font-size: 28rpx;
+  color: #666; /* 与您定义的 value 颜色一致 */
+}
 /* 输入框样式 */
 /* .ai-input {
   flex: 1;

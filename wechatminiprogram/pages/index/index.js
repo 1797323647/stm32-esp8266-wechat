@@ -8,28 +8,42 @@ Page({
     gx: '---',           // 陀螺仪X轴
     gy: '---',           // 陀螺仪Y轴
     gz: '---',           // 陀螺仪Z轴
-    activityStatus: '静止', //  活动状态，默认为“静止”
-    prevAx: 0,          //  上一次的加速度X轴值，初始值为 0
-    prevAy: 0,          //  上一次的加速度Y轴值，初始值为 0
-    prevAz: 0,          //  上一次的加速度Z轴值，初始值为 0
-    prevGx: 0,          //  新增：  上一次的陀螺仪X轴值，初始值为 0
-    prevGy: 0,          //  新增：  上一次的陀螺仪Y轴值，初始值为 0
-    prevGz: 0 ,         //  新增：  上一次的陀螺仪Z轴值，初始值为 0
-    question: '',    // 用户输入的问题
-    aiAnswer: '' ,    // AI 的回答
-    isThinking: false     // 新增：是否正在思考
+    activityStatus: '静止', // 活动状态，默认为“静止”
+    prevAx: 0,          // 上一次的加速度X轴值，初始值为 0
+    prevAy: 0,          // 上一次的加速度Y轴值，初始值为 0
+    prevAz: 0,          // 上一次的加速度Z轴值，初始值为 0
+    prevGx: 0,          // 上一次的陀螺仪X轴值，初始值为 0
+    prevGy: 0,          // 上一次的陀螺仪Y轴值，初始值为 0
+    prevGz: 0,         // 上一次的陀螺仪Z轴值，初始值为 0
+    question: '',       // 用户输入的问题
+    aiAnswer: '',       // AI 的回答
+    isThinking: false,  // 是否正在思考
+    modelIndex: 0,        // 默认选中第0个选项（"V3"）
+    modelSelected: 'V3'   // 默认显示 "V3"
   },
 
   onLoad: function () {
     this.fetchData(); // 页面加载时立即请求一次数据
     setInterval(this.fetchData, 3000); // 每 3 秒定时刷新数据
   },
-  //deepseek 函数
+
+  // 处理下拉框选择事件
+  bindModelChange: function(e) {
+    const range = ['V3', 'R1'];        // 选项列表
+    const index = e.detail.value;      // 获取选中的索引
+    const selectedValue = range[index]; // 根据索引获取实际值
+    this.setData({
+      modelIndex: index,               // 更新选中索引
+      modelSelected: selectedValue     // 更新显示的模型名称
+    });
+  },
+
   inputQuestion: function(e) {
     this.setData({
       question: e.detail.value
     });
   },
+
   askAI: function() {
     const that = this;
     if (!that.data.question) {
@@ -37,10 +51,12 @@ Page({
       return;
     }
     // 设置正在思考状态，清空之前的回答
-  that.setData({
-    isThinking: true,
-    aiAnswer: ''
-  });
+    that.setData({
+      isThinking: true,
+      aiAnswer: ''
+    });
+    // 根据选中的模型设置 model 字段
+    const model = that.data.modelSelected === 'V3' ? 'deepseek-chat' : 'deepseek-reasoner';
     wx.request({
       url: 'https://api.deepseek.com/chat/completions',
       method: 'POST',
@@ -49,15 +65,15 @@ Page({
         'Authorization': 'Bearer sk-0c3d0d73693a477eaacb057dd56f3394' // 替换为真实的 DeepSeek API 密钥
       },
       data: {
-        model: 'deepseek-chat',
+        model: model,
         messages: [{ role: 'user', content: that.data.question }]
       },
       success: res => {
         if (res.data.choices && res.data.choices.length > 0) {
           that.setData({
-            aiAnswer: res.data.choices[0].message.content+"By deepseek-"+new Date().toLocaleString(),
+            aiAnswer: res.data.choices[0].message.content + " By " + model + " - " + new Date().toLocaleString(),
             question: '', // 清空输入框
-            isThinking:false
+            isThinking: false
           });
         } else {
           that.setData({

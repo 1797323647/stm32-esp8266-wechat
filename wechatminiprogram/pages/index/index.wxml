@@ -61,14 +61,18 @@
     </view>
   </view>
 </view>
-<!-- 第六行：deepseek  -->
+
 <!-- AI 部分 -->
 <view class="ai-section">
   <view class="ai-input-container">
-    <input class="ai-input" placeholder="输入您的问题" value="{{question}}" bindinput="inputQuestion" />
+    <!-- 新增：模型选择下拉框 -->
+    <picker bindchange="bindModelChange" range="{{['V3大模型', 'R1深度思考']}}" value="{{modelIndex}}">
+    <view class="model-selected">{{modelSelected}} <icon type="arrowdown" size="20"></icon></view>
+  </picker>
+    <input class="ai-input" placeholder="给deepseek发送消息" value="{{question}}" bindinput="inputQuestion" />
     <button class="ai-button" bindtap="askAI">发送</button>
   </view>
-  <!-- 新增：思考提示 -->
+  <!-- 思考提示 -->
   <view wx:if="{{isThinking}}" class="thinking-text">正在思考...</view>
   <!-- AI 回答 -->
   <view class="ai-answer">{{aiAnswer}}</view>
