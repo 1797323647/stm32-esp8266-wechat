@@ -1,0 +1,128 @@
+/* 容器样式 */
+.container {
+  padding: 20rpx;
+}
+
+/* 标题样式 */
+.title {
+  text-align: center;          /* 居中 */
+  font-size: 36rpx;            /* 字体大小 */
+  font-weight: bold;           /* 加粗 */
+  color: #ff00bf57;              /* 蓝色高亮 */
+  margin-bottom: 20rpx;        /* 与卡片的间距 */
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #ffffff;    /* 白色背景 */
+  border-radius: 20rpx;        /* 圆角 */
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1); /* 阴影 */
+  padding: 20rpx;              /* 内边距 */
+  margin-top: 20rpx;           /* 与标题的间距 */
+}
+
+/* 每行样式 */
+.row {
+  display: flex;
+  justify-content: space-around; /* 数据项均匀分布 */
+  margin-bottom: 20rpx;
+}
+
+/* 第五行特殊样式 */
+.row-last {
+  justify-content: center;     /* 居中显示 */
+}
+
+/* 每个数据项样式 */
+.item {
+  font-size: 32rpx;
+  margin-right: 120rpx;         /* 数据项间距 */
+}
+
+/* 去掉每行最后一个数据项的右侧间距 */
+.row .item:last-child {
+  margin-right: 0;
+}
+
+/* 标签样式 */
+.label {
+  font-weight: bold;
+  color: #ff00bf57;
+  margin-right: 50rpx;         /* 标签与数值间距 */
+  text-align: left;            /* 显式左对齐 */
+}
+
+/* 数值样式 */
+.value {
+  color: #666;
+}
+
+/* 状态高亮（绿色） */
+.status-value {
+  color: green;                /* 绿色字体 */
+  font-weight: bold;           /* 加粗 */
+}
+/* AI 部分样式 */
+.ai-section {
+  margin-top: 40rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框和按钮容器 */
+.ai-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+/* 输入框样式 */
+/* .ai-input {
+  flex: 1;
+  height: 80rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #ff00bf57;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+} */
+/* 输入框样式 */
+.ai-input {
+  width: 1500rpx;  /* 自定义宽度，例如 500rpx */
+  height: 80rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #ff00bf57;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+/* 按钮样式 */
+.ai-button {
+  width: 120rpx;
+  height: 80rpx;
+  background-color: #ff00bf57;
+  color: #ffffff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 回答样式 */
+.ai-answer {
+  font-size: 32rpx;
+  color: #666;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+/* 思考提示样式 */
+.thinking-text {
+  font-size: 28rpx;
+  color: #888888;
+  text-align: center;
+  margin: 20rpx 0;
+}
