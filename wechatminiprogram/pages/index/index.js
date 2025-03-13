@@ -18,8 +18,7 @@ Page({
     question: '',       // 用户输入的问题
     aiAnswer: '',       // AI 的回答
     isThinking: false,  // 是否正在思考
-    modelIndex: 0,        // 默认选中第0个选项（"V3"）
-    modelSelected: 'V3'   // 默认显示 "V3"
+    isDeepThinking: false  // 新增：控制深度思考按钮状态
   },
 
   onLoad: function () {
@@ -27,14 +26,9 @@ Page({
     setInterval(this.fetchData, 3000); // 每 3 秒定时刷新数据
   },
 
-  // 处理下拉框选择事件
-  bindModelChange: function(e) {
-    const range = ['V3', 'R1'];        // 选项列表
-    const index = e.detail.value;      // 获取选中的索引
-    const selectedValue = range[index]; // 根据索引获取实际值
+  toggleDeepThinking: function() {
     this.setData({
-      modelIndex: index,               // 更新选中索引
-      modelSelected: selectedValue     // 更新显示的模型名称
+      isDeepThinking: !this.data.isDeepThinking
     });
   },
 
@@ -47,7 +41,7 @@ Page({
   askAI: function() {
     const that = this;
     if (!that.data.question) {
-      wx.showToast({ title: '请输入问题', icon: 'none' });
+      wx.showToast({ title: '问问deepseek吧', icon: 'none' });
       return;
     }
     // 设置正在思考状态，清空之前的回答
@@ -55,14 +49,16 @@ Page({
       isThinking: true,
       aiAnswer: ''
     });
-    // 根据选中的模型设置 model 字段
-    const model = that.data.modelSelected === 'V3' ? 'deepseek-chat' : 'deepseek-reasoner';
+    
+    // 根据 isDeepThinking 选择模型
+    const model = that.data.isDeepThinking ? 'deepseek-reasoner' : 'deepseek-chat';
+    
     wx.request({
       url: 'https://api.deepseek.com/chat/completions',
       method: 'POST',
       header: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer sk-0c3d0d73693a477eaacb057dd56f3394' // 替换为真实的 DeepSeek API 密钥
+        'Authorization': 'Bearer sk-0c3d0d73693a477eaacb057dd56f3394' // 请确保使用真实的 API 密钥
       },
       data: {
         model: model,
@@ -78,7 +74,7 @@ Page({
         } else {
           that.setData({
             aiAnswer: 'AI 回答失败',
-            isThinking: false   // 隐藏思考提示
+            isThinking: false
           });
           wx.showToast({ title: 'AI 回答失败', icon: 'none' });
         }
@@ -86,7 +82,7 @@ Page({
       fail: err => {
         that.setData({
           aiAnswer: '网络请求失败',
-          isThinking: false     // 隐藏思考提示
+          isThinking: false
         });
         wx.showToast({ title: '网络请求失败', icon: 'none' });
       }
@@ -106,10 +102,10 @@ Page({
       },
       success: res => {
         console.log('API 请求成功', res.data);
-  
+        
         if (res.data.code == 0) {
           let datastreams = res.data.data.devices[0].datastreams;
-  
+          
           let hrValue = '---';
           let spo2Value = '---';
           let axValue = 0;
@@ -118,7 +114,7 @@ Page({
           let gxValue = 0;
           let gyValue = 0;
           let gzValue = 0;
-  
+          
           datastreams.forEach(item => {
             if (item.id === 'dis_hr') {
               hrValue = item.value;
@@ -138,16 +134,16 @@ Page({
               gzValue = parseInt(item.value);
             }
           });
-  
+          
           // 活动状态检测逻辑
           let activityStatus = '静止';
           const changeThresholdWalking = 400;
           const changeThresholdRunning = 1800;
-  
-          const accelerationChangeMagnitude = Math.abs(axValue - that.data.prevAx) + Math.abs(ayValue - that.data.prevAy) + Math.abs(azValue - that.data.prevAz);
-          const gyroscopeChangeMagnitude = Math.abs(gxValue - that.data.prevGx) + Math.abs(gyValue - that.data.prevGy) + Math.abs(gzValue - that.data.prevGz);
+          
+          const accelerationChangeMagnitude = Math.abs(axValue - this.data.prevAx) + Math.abs(ayValue - this.data.prevAy) + Math.abs(azValue - this.data.prevAz);
+          const gyroscopeChangeMagnitude = Math.abs(gxValue - this.data.prevGx) + Math.abs(gyValue - this.data.prevGy) + Math.abs(gzValue - this.data.prevGz);
           const totalChangeMagnitude = accelerationChangeMagnitude + gyroscopeChangeMagnitude;
-  
+          
           if (totalChangeMagnitude > changeThresholdRunning) {
             activityStatus = '跑步';
           } else if (totalChangeMagnitude > changeThresholdWalking) {
@@ -155,9 +151,9 @@ Page({
           } else {
             activityStatus = '静止';
           }
-  
+          
           // 更新数据
-          that.setData({
+          this.setData({
             heartRate: hrValue,
             spo2: spo2Value,
             ax: axValue,

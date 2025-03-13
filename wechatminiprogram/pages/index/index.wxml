@@ -65,11 +65,11 @@
 <!-- AI 部分 -->
 <view class="ai-section">
   <view class="ai-input-container">
-    <!-- 新增：模型选择下拉框 -->
-    <picker bindchange="bindModelChange" range="{{['V3大模型', 'R1深度思考']}}" value="{{modelIndex}}">
-    <view class="model-selected">{{modelSelected}} <icon type="arrowdown" size="20"></icon></view>
-  </picker>
-    <input class="ai-input" placeholder="给deepseek发送消息" value="{{question}}" bindinput="inputQuestion" />
+    <!-- 深度思考按钮 -->
+    <button class="model-button {{isDeepThinking ? 'active' : ''}}" bindtap="toggleDeepThinking">
+      深度思考
+    </button>
+    <input class="ai-input" placeholder="问问deepseek吧" value="{{question}}" bindinput="inputQuestion" />
     <button class="ai-button" bindtap="askAI">发送</button>
   </view>
   <!-- 思考提示 -->

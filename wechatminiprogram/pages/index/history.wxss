@@ -1,0 +1,34 @@
+.history-container {
+  padding: 20rpx;
+}
+
+.history-title {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ff00bf57;
+  margin-bottom: 20rpx;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.timestamp {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.heart-rate, .spo2 {
+  font-size: 32rpx;
+  color: #666;
+}

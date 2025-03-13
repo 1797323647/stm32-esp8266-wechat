@@ -24,8 +24,9 @@
 /* 每行样式 */
 .row {
   display: flex;
-  justify-content: space-around; /* 数据项均匀分布 */
-  margin-bottom: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
 }
 
 /* 第五行特殊样式 */
@@ -36,12 +37,16 @@
 /* 每个数据项样式 */
 .item {
   font-size: 32rpx;
-  margin-right: 120rpx;         /* 数据项间距 */
+  margin-right: 80rpx;         /* 数据项间距 */
+  min-width: 300rpx;  /* 固定宽度 */
+  height: 50rpx;      /* 固定高度 */
+  display: flex;
+  align-items: center;
 }
 
 /* 去掉每行最后一个数据项的右侧间距 */
 .row .item:last-child {
-  margin-right: 0;
+  margin-right: -120rpx;
 }
 
 /* 标签样式 */
@@ -49,12 +54,14 @@
   font-weight: bold;
   color: #ff00bf57;
   margin-right: 50rpx;         /* 标签与数值间距 */
-  text-align: left;            /* 显式左对齐 */
+  /* text-align: left;            显式左对齐 */
+  min-width: 80rpx;   /* 固定标签宽度 */
 }
 
 /* 数值样式 */
 .value {
   color: #666;
+  flex: 1;
 }
 
 /* 状态高亮（绿色） */
@@ -62,9 +69,22 @@
   color: green;                /* 绿色字体 */
   font-weight: bold;           /* 加粗 */
 }
+/* 历史记录按钮样式 */
+/* 历史记录按钮样式 */
+.history-button {
+  width: 200rpx;
+  height: 60rpx;
+  background-color: #ff00bf57;
+  color: #ffffff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* AI 部分样式 */
 .ai-section {
-  margin-top: 40rpx;
+  margin-top: -10rpx;
   padding: 20rpx;
   background-color: #ffffff;
   border-radius: 20rpx;
@@ -78,31 +98,25 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
-/* 下拉框样式 */
-.model-selected {
-  width: 30rpx; /* 调整宽度，可根据需要修改 */
-  height: 60rpx;
-  padding: 10rpx 20rpx;
-  border: 2rpx solid #ff00bf57; /* 使用您定义的颜色 */
+/* 深度思考按钮样式 */
+.model-button {
+  width: 160rpx;
+  height: 80rpx;
+  background-color: #f0f0f0; /* 未启用时的背景色 */
+  color: #666;
+  font-size: 24rpx;
   border-radius: 10rpx;
-  background-color: #ffffff; /* 白色背景 */
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 文字和箭头分布两端 */
-  font-size: 28rpx;
-  color: #666; /* 与您定义的 value 颜色一致 */
-}
-/* 输入框样式 */
-/* .ai-input {
-  flex: 1;
-  height: 80rpx;
-  padding: 0 20rpx;
-  border: 2rpx solid #ff00bf57;
-  border-radius: 10rpx;
-  font-size: 28rpx;
+  justify-content: center;
   margin-right: 20rpx;
-} */
-/* 输入框样式 */
+}
+
+.model-button.active {
+  background-color: #ff00bf57; /* 启用时的背景色 */
+  color: #ffffff;
+}
+
 .ai-input {
   width: 1500rpx;  /* 自定义宽度，例如 500rpx */
   height: 80rpx;
@@ -110,7 +124,7 @@
   border: 2rpx solid #ff00bf57;
   border-radius: 10rpx;
   font-size: 28rpx;
-  margin-right: 20rpx;
+  margin-right: 0rpx;
 }
 
 /* 按钮样式 */
