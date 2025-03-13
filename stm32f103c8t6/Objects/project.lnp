@@ -9,6 +9,7 @@
 ".\objects\max30102.o"
 ".\objects\algorithm.o"
 ".\objects\sys.o"
+".\objects\buzzer.o"
 ".\objects\misc.o"
 ".\objects\stm32f10x_exti.o"
 ".\objects\stm32f10x_gpio.o"

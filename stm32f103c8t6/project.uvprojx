@@ -485,6 +485,16 @@
               <FileType>5</FileType>
               <FilePath>.\MYCODE\sys.h</FilePath>
             </File>
+            <File>
+              <FileName>buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MYCODE\buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>buzzer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MYCODE\buzzer.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

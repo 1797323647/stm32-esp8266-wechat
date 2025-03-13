@@ -25,3 +25,4 @@
 .\objects\main.o: MYCODE\max30102.h
 .\objects\main.o: MYCODE\sys.h
 .\objects\main.o: MYCODE\algorithm.h
+.\objects\main.o: MYCODE\buzzer.h

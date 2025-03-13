@@ -7,6 +7,7 @@
 #include "max30102.h"
 #include "algorithm.h"
 #include "sys.h"
+#include "buzzer.h"
 
 // --- 定义显示模式 ---
 #define DISPLAY_MAX30102  1
@@ -41,6 +42,7 @@ int main(void) {
     I2C_Configuration();
     Tick_Delay_Config();
     EXTI_Button_Config(); // 基于中断的按键配置
+	BUZZER_Init();//蜂鸣器初始化
     OLED_Init();
     OLED_CLS();
     MPU6050_Init();
@@ -49,6 +51,7 @@ int main(void) {
     delay_ms(2000);
     LEDON;
     OLED_ShowStr(32, 0, "Posture:", 1); // 初始显示 MPU6050 提示信息
+//	BUZZER_ON;
     while (1) {
         // 使用中断设置的flag来检测按钮按下
         if(button_pressed){
@@ -107,7 +110,11 @@ int main(void) {
                     printf("SpO2Valid=%i\r\n", ch_spo2_valid);
                     OLED_ShowNumber(64,2,dis_hr,2);
                     OLED_ShowNumber(64,4,dis_spo2,2);
-					
+					if(dis_hr > 80 || dis_hr < 40 || dis_spo2 > 100 || dis_spo2 < 60){
+						BUZZER_ON;
+					}else {
+						BUZZER_OFF;
+					}
 					 // --- 添加数据上传到ESP8266的代码 (仅当数据变化时才发送) ---
                     if (dis_hr != last_sent_hr || dis_spo2 != last_sent_spo2) {
                         char hr_spo2_data[50]; // 存储HR和SpO2数据的字符串缓冲区
