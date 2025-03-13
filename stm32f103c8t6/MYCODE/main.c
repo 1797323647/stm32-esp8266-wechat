@@ -70,6 +70,7 @@ int main(void) {
                 OLED_ShowStr(0,4,"SP  is  ......",2);
             }
             else{
+				BUZZER_OFF;
                 OLED_ShowStr(32, 0, "Posture:", 1);
             }
             printf("Mode changed to: %d\r\n", display_mode);

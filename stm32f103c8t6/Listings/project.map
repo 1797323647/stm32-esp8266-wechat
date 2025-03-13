@@ -1054,22 +1054,22 @@ Image Symbol Table
     i.delay_us                               0x08001a58   Section        0  delay.o(i.delay_us)
     i.fputc                                  0x08001aa8   Section        0  uart.o(i.fputc)
     i.main                                   0x08001ac4   Section        0  main.o(i.main)
-    i.max30102_Bus_Read                      0x08001efc   Section        0  max30102.o(i.max30102_Bus_Read)
-    i.max30102_Bus_Write                     0x08001f4e   Section        0  max30102.o(i.max30102_Bus_Write)
-    i.max30102_FIFO_ReadBytes                0x08001f92   Section        0  max30102.o(i.max30102_FIFO_ReadBytes)
-    i.max30102_app_init                      0x08002014   Section        0  max30102.o(i.max30102_app_init)
-    i.max30102_init                          0x08002028   Section        0  max30102.o(i.max30102_init)
-    i.max30102_reset                         0x080020b0   Section        0  max30102.o(i.max30102_reset)
-    i.max30102_task                          0x080020c4   Section        0  max30102.o(i.max30102_task)
-    i.maxim_find_peaks                       0x0800231c   Section        0  algorithm.o(i.maxim_find_peaks)
-    i.maxim_heart_rate_and_oxygen_saturation 0x08002360   Section        0  algorithm.o(i.maxim_heart_rate_and_oxygen_saturation)
-    i.maxim_peaks_above_min_height           0x08002860   Section        0  algorithm.o(i.maxim_peaks_above_min_height)
-    i.maxim_remove_close_peaks               0x080028da   Section        0  algorithm.o(i.maxim_remove_close_peaks)
-    i.maxim_sort_ascend                      0x0800294c   Section        0  algorithm.o(i.maxim_sort_ascend)
-    i.maxim_sort_indices_descend             0x08002982   Section        0  algorithm.o(i.maxim_sort_indices_descend)
-    i.uart_init                              0x080029c4   Section        0  uart.o(i.uart_init)
-    .constdata                               0x08002a64   Section     2072  oled.o(.constdata)
-    .constdata                               0x0800327c   Section      246  algorithm.o(.constdata)
+    i.max30102_Bus_Read                      0x08001f04   Section        0  max30102.o(i.max30102_Bus_Read)
+    i.max30102_Bus_Write                     0x08001f56   Section        0  max30102.o(i.max30102_Bus_Write)
+    i.max30102_FIFO_ReadBytes                0x08001f9a   Section        0  max30102.o(i.max30102_FIFO_ReadBytes)
+    i.max30102_app_init                      0x0800201c   Section        0  max30102.o(i.max30102_app_init)
+    i.max30102_init                          0x08002030   Section        0  max30102.o(i.max30102_init)
+    i.max30102_reset                         0x080020b8   Section        0  max30102.o(i.max30102_reset)
+    i.max30102_task                          0x080020cc   Section        0  max30102.o(i.max30102_task)
+    i.maxim_find_peaks                       0x08002324   Section        0  algorithm.o(i.maxim_find_peaks)
+    i.maxim_heart_rate_and_oxygen_saturation 0x08002368   Section        0  algorithm.o(i.maxim_heart_rate_and_oxygen_saturation)
+    i.maxim_peaks_above_min_height           0x08002868   Section        0  algorithm.o(i.maxim_peaks_above_min_height)
+    i.maxim_remove_close_peaks               0x080028e2   Section        0  algorithm.o(i.maxim_remove_close_peaks)
+    i.maxim_sort_ascend                      0x08002954   Section        0  algorithm.o(i.maxim_sort_ascend)
+    i.maxim_sort_indices_descend             0x0800298a   Section        0  algorithm.o(i.maxim_sort_indices_descend)
+    i.uart_init                              0x080029cc   Section        0  uart.o(i.uart_init)
+    .constdata                               0x08002a6c   Section     2072  oled.o(.constdata)
+    .constdata                               0x08003284   Section      246  algorithm.o(.constdata)
     .data                                    0x20000000   Section       24  main.o(.data)
     .data                                    0x20000018   Section        4  delay.o(.data)
     fac_us                                   0x20000018   Data           1  delay.o(.data)
@@ -1299,27 +1299,27 @@ Image Symbol Table
     delay_ms                                 0x08001a09   Thumb Code    74  delay.o(i.delay_ms)
     delay_us                                 0x08001a59   Thumb Code    74  delay.o(i.delay_us)
     fputc                                    0x08001aa9   Thumb Code    24  uart.o(i.fputc)
-    main                                     0x08001ac5   Thumb Code   728  main.o(i.main)
-    max30102_Bus_Read                        0x08001efd   Thumb Code    82  max30102.o(i.max30102_Bus_Read)
-    max30102_Bus_Write                       0x08001f4f   Thumb Code    68  max30102.o(i.max30102_Bus_Write)
-    max30102_FIFO_ReadBytes                  0x08001f93   Thumb Code   128  max30102.o(i.max30102_FIFO_ReadBytes)
-    max30102_app_init                        0x08002015   Thumb Code    16  max30102.o(i.max30102_app_init)
-    max30102_init                            0x08002029   Thumb Code   130  max30102.o(i.max30102_init)
-    max30102_reset                           0x080020b1   Thumb Code    20  max30102.o(i.max30102_reset)
-    max30102_task                            0x080020c5   Thumb Code   552  max30102.o(i.max30102_task)
-    maxim_find_peaks                         0x0800231d   Thumb Code    66  algorithm.o(i.maxim_find_peaks)
-    maxim_heart_rate_and_oxygen_saturation   0x08002361   Thumb Code  1272  algorithm.o(i.maxim_heart_rate_and_oxygen_saturation)
-    maxim_peaks_above_min_height             0x08002861   Thumb Code   122  algorithm.o(i.maxim_peaks_above_min_height)
-    maxim_remove_close_peaks                 0x080028db   Thumb Code   114  algorithm.o(i.maxim_remove_close_peaks)
-    maxim_sort_ascend                        0x0800294d   Thumb Code    54  algorithm.o(i.maxim_sort_ascend)
-    maxim_sort_indices_descend               0x08002983   Thumb Code    64  algorithm.o(i.maxim_sort_indices_descend)
-    uart_init                                0x080029c5   Thumb Code   152  uart.o(i.uart_init)
-    F6x8                                     0x08002a64   Data         552  oled.o(.constdata)
-    F8X16                                    0x08002c8c   Data        1520  oled.o(.constdata)
-    auw_hamm                                 0x0800327c   Data          62  algorithm.o(.constdata)
-    uch_spo2_table                           0x080032ba   Data         184  algorithm.o(.constdata)
-    Region$$Table$$Base                      0x08003374   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003394   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x08001ac5   Thumb Code   736  main.o(i.main)
+    max30102_Bus_Read                        0x08001f05   Thumb Code    82  max30102.o(i.max30102_Bus_Read)
+    max30102_Bus_Write                       0x08001f57   Thumb Code    68  max30102.o(i.max30102_Bus_Write)
+    max30102_FIFO_ReadBytes                  0x08001f9b   Thumb Code   128  max30102.o(i.max30102_FIFO_ReadBytes)
+    max30102_app_init                        0x0800201d   Thumb Code    16  max30102.o(i.max30102_app_init)
+    max30102_init                            0x08002031   Thumb Code   130  max30102.o(i.max30102_init)
+    max30102_reset                           0x080020b9   Thumb Code    20  max30102.o(i.max30102_reset)
+    max30102_task                            0x080020cd   Thumb Code   552  max30102.o(i.max30102_task)
+    maxim_find_peaks                         0x08002325   Thumb Code    66  algorithm.o(i.maxim_find_peaks)
+    maxim_heart_rate_and_oxygen_saturation   0x08002369   Thumb Code  1272  algorithm.o(i.maxim_heart_rate_and_oxygen_saturation)
+    maxim_peaks_above_min_height             0x08002869   Thumb Code   122  algorithm.o(i.maxim_peaks_above_min_height)
+    maxim_remove_close_peaks                 0x080028e3   Thumb Code   114  algorithm.o(i.maxim_remove_close_peaks)
+    maxim_sort_ascend                        0x08002955   Thumb Code    54  algorithm.o(i.maxim_sort_ascend)
+    maxim_sort_indices_descend               0x0800298b   Thumb Code    64  algorithm.o(i.maxim_sort_indices_descend)
+    uart_init                                0x080029cd   Thumb Code   152  uart.o(i.uart_init)
+    F6x8                                     0x08002a6c   Data         552  oled.o(.constdata)
+    F8X16                                    0x08002c94   Data        1520  oled.o(.constdata)
+    auw_hamm                                 0x08003284   Data          62  algorithm.o(.constdata)
+    uch_spo2_table                           0x080032c2   Data         184  algorithm.o(.constdata)
+    Region$$Table$$Base                      0x0800337c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800339c   Number         0  anon$$obj.o(Region$$Table)
     button_pressed                           0x20000000   Data           1  main.o(.data)
     last_button_time                         0x20000004   Data           4  main.o(.data)
     display_mode                             0x20000008   Data           1  main.o(.data)
@@ -1359,9 +1359,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000101
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000033f8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00003400, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003394, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000339c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1477,52 +1477,52 @@ Memory Map of the image
     0x08001a08   0x08001a08   0x00000050   Code   RO          298    i.delay_ms          delay.o
     0x08001a58   0x08001a58   0x00000050   Code   RO          300    i.delay_us          delay.o
     0x08001aa8   0x08001aa8   0x0000001c   Code   RO          487    i.fputc             uart.o
-    0x08001ac4   0x08001ac4   0x00000438   Code   RO            7    i.main              main.o
-    0x08001efc   0x08001efc   0x00000052   Code   RO          597    i.max30102_Bus_Read  max30102.o
-    0x08001f4e   0x08001f4e   0x00000044   Code   RO          598    i.max30102_Bus_Write  max30102.o
-    0x08001f92   0x08001f92   0x00000080   Code   RO          599    i.max30102_FIFO_ReadBytes  max30102.o
-    0x08002012   0x08002012   0x00000002   PAD
-    0x08002014   0x08002014   0x00000014   Code   RO          601    i.max30102_app_init  max30102.o
-    0x08002028   0x08002028   0x00000088   Code   RO          602    i.max30102_init     max30102.o
-    0x080020b0   0x080020b0   0x00000014   Code   RO          603    i.max30102_reset    max30102.o
-    0x080020c4   0x080020c4   0x00000258   Code   RO          604    i.max30102_task     max30102.o
-    0x0800231c   0x0800231c   0x00000042   Code   RO          748    i.maxim_find_peaks  algorithm.o
-    0x0800235e   0x0800235e   0x00000002   PAD
-    0x08002360   0x08002360   0x00000500   Code   RO          749    i.maxim_heart_rate_and_oxygen_saturation  algorithm.o
-    0x08002860   0x08002860   0x0000007a   Code   RO          750    i.maxim_peaks_above_min_height  algorithm.o
-    0x080028da   0x080028da   0x00000072   Code   RO          751    i.maxim_remove_close_peaks  algorithm.o
-    0x0800294c   0x0800294c   0x00000036   Code   RO          752    i.maxim_sort_ascend  algorithm.o
-    0x08002982   0x08002982   0x00000040   Code   RO          753    i.maxim_sort_indices_descend  algorithm.o
-    0x080029c2   0x080029c2   0x00000002   PAD
-    0x080029c4   0x080029c4   0x000000a0   Code   RO          488    i.uart_init         uart.o
-    0x08002a64   0x08002a64   0x00000818   Data   RO          155    .constdata          oled.o
-    0x0800327c   0x0800327c   0x000000f6   Data   RO          755    .constdata          algorithm.o
-    0x08003372   0x08003372   0x00000002   PAD
-    0x08003374   0x08003374   0x00000020   Data   RO         2640    Region$$Table       anon$$obj.o
+    0x08001ac4   0x08001ac4   0x00000440   Code   RO            7    i.main              main.o
+    0x08001f04   0x08001f04   0x00000052   Code   RO          597    i.max30102_Bus_Read  max30102.o
+    0x08001f56   0x08001f56   0x00000044   Code   RO          598    i.max30102_Bus_Write  max30102.o
+    0x08001f9a   0x08001f9a   0x00000080   Code   RO          599    i.max30102_FIFO_ReadBytes  max30102.o
+    0x0800201a   0x0800201a   0x00000002   PAD
+    0x0800201c   0x0800201c   0x00000014   Code   RO          601    i.max30102_app_init  max30102.o
+    0x08002030   0x08002030   0x00000088   Code   RO          602    i.max30102_init     max30102.o
+    0x080020b8   0x080020b8   0x00000014   Code   RO          603    i.max30102_reset    max30102.o
+    0x080020cc   0x080020cc   0x00000258   Code   RO          604    i.max30102_task     max30102.o
+    0x08002324   0x08002324   0x00000042   Code   RO          748    i.maxim_find_peaks  algorithm.o
+    0x08002366   0x08002366   0x00000002   PAD
+    0x08002368   0x08002368   0x00000500   Code   RO          749    i.maxim_heart_rate_and_oxygen_saturation  algorithm.o
+    0x08002868   0x08002868   0x0000007a   Code   RO          750    i.maxim_peaks_above_min_height  algorithm.o
+    0x080028e2   0x080028e2   0x00000072   Code   RO          751    i.maxim_remove_close_peaks  algorithm.o
+    0x08002954   0x08002954   0x00000036   Code   RO          752    i.maxim_sort_ascend  algorithm.o
+    0x0800298a   0x0800298a   0x00000040   Code   RO          753    i.maxim_sort_indices_descend  algorithm.o
+    0x080029ca   0x080029ca   0x00000002   PAD
+    0x080029cc   0x080029cc   0x000000a0   Code   RO          488    i.uart_init         uart.o
+    0x08002a6c   0x08002a6c   0x00000818   Data   RO          155    .constdata          oled.o
+    0x08003284   0x08003284   0x000000f6   Data   RO          755    .constdata          algorithm.o
+    0x0800337a   0x0800337a   0x00000002   PAD
+    0x0800337c   0x0800337c   0x00000020   Data   RO         2640    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08003394, Size: 0x00000064, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x0800339c, Size: 0x00000064, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003394   0x00000018   Data   RW            8    .data               main.o
-    0x20000018   0x080033ac   0x00000004   Data   RW          301    .data               delay.o
-    0x2000001c   0x080033b0   0x00000005   Data   RW          490    .data               uart.o
-    0x20000021   0x080033b5   0x00000003   PAD
-    0x20000024   0x080033b8   0x00000014   Data   RW          609    .data               max30102.o
-    0x20000038   0x080033cc   0x00000014   Data   RW         1342    .data               stm32f10x_rcc.o
-    0x2000004c   0x080033e0   0x00000014   Data   RW         2285    .data               system_stm32f10x.o
-    0x20000060   0x080033f4   0x00000004   Data   RW         2612    .data               mc_w.l(stdout.o)
+    0x20000000   0x0800339c   0x00000018   Data   RW            8    .data               main.o
+    0x20000018   0x080033b4   0x00000004   Data   RW          301    .data               delay.o
+    0x2000001c   0x080033b8   0x00000005   Data   RW          490    .data               uart.o
+    0x20000021   0x080033bd   0x00000003   PAD
+    0x20000024   0x080033c0   0x00000014   Data   RW          609    .data               max30102.o
+    0x20000038   0x080033d4   0x00000014   Data   RW         1342    .data               stm32f10x_rcc.o
+    0x2000004c   0x080033e8   0x00000014   Data   RW         2285    .data               system_stm32f10x.o
+    0x20000060   0x080033fc   0x00000004   Data   RW         2612    .data               mc_w.l(stdout.o)
 
 
-    Execution Region ER_ZI (Exec base: 0x20000064, Load base: 0x080033f8, Size: 0x00002c04, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000064, Load base: 0x08003400, Size: 0x00002c04, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000064        -       0x00000100   Zero   RW          489    .bss                uart.o
     0x20000164        -       0x00000fa0   Zero   RW          608    .bss                max30102.o
     0x20001104        -       0x00001760   Zero   RW          754    .bss                algorithm.o
-    0x20002864   0x080033f8   0x00000004   PAD
+    0x20002864   0x08003400   0x00000004   PAD
     0x20002868        -       0x00000400   Zero   RW         2271    STACK               startup_stm32f10x_md.o
 
 
@@ -1537,7 +1537,7 @@ Image component sizes
         52          6          0          0          0        530   buzzer.o
        228         30          0          4          0       1878   delay.o
         56          6          0          0          0        536   led.o
-      1252        366          0         24          0     240382   main.o
+      1260        366          0         24          0     240390   main.o
       1746        166          0         20       4000      10344   max30102.o
        152         12          0          0          0       1694   misc.o
        674         18          0          0          0       8536   mpu6050.o
@@ -1551,7 +1551,7 @@ Image component sizes
        494         44          0          5        256       4626   uart.o
 
     ----------------------------------------------------------------------
-      9160        822       2588         96      11268     308923   Object Totals
+      9168        822       2588         96      11268     308931   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         18          0          2          3          4          0   (incl. Padding)
 
@@ -1601,15 +1601,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10616        858       2588        100      11268     305167   Grand Totals
-     10616        858       2588        100      11268     305167   ELF Image Totals
-     10616        858       2588        100          0          0   ROM Totals
+     10624        858       2588        100      11268     305175   Grand Totals
+     10624        858       2588        100      11268     305175   ELF Image Totals
+     10624        858       2588        100          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                13204 (  12.89kB)
+    Total RO  Size (Code + RO Data)                13212 (  12.90kB)
     Total RW  Size (RW Data + ZI Data)             11368 (  11.10kB)
-    Total ROM Size (Code + RO Data + RW Data)      13304 (  12.99kB)
+    Total ROM Size (Code + RO Data + RW Data)      13312 (  13.00kB)
 
 ==============================================================================
 

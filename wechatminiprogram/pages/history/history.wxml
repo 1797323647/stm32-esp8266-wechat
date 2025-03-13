@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- 加载中提示 -->
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+  
+  <!-- 错误信息 -->
+  <view wx:if="{{error}}" class="error">{{error}}</view>
+  
+  <!-- 数据展示 -->
+  <view wx:if="{{!loading && !error && historyData.length > 0}}">
+    <view class="history-list">
+      <block wx:for="{{historyData}}" wx:for-item="item" wx:for-index="index" wx:key="at">
+        <view class="history-item">
+          <text class="index">{{index + 1}}.</text>
+          <text>HR: {{item.hr}}</text>
+          <text>SPO2: {{item.spo2}}</text>
+          <text>{{item.at}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

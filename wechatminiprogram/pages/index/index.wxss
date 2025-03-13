@@ -104,12 +104,12 @@
   height: 80rpx;
   background-color: #f0f0f0; /* 未启用时的背景色 */
   color: #666;
-  font-size: 24rpx;
+  font-size: 25rpx;
   border-radius: 10rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20rpx;
+  margin-right: 0rpx;
 }
 
 .model-button.active {
@@ -133,7 +133,7 @@
   height: 80rpx;
   background-color: #ff00bf57;
   color: #ffffff;
-  font-size: 28rpx;
+  font-size: 25rpx;
   border-radius: 10rpx;
   display: flex;
   align-items: center;

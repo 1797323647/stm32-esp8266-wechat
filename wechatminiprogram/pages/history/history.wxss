@@ -1,0 +1,39 @@
+.container {
+  padding: 20rpx;
+}
+
+.loading {
+  text-align: center;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  font-size: 32rpx;
+  color: #ff0000;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item {
+  display: flex;
+  align-items: center; /* 确保垂直居中 */
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.index {
+  font-weight: bold;
+  margin-right: 5rpx; /* 减小右边距 */
+  width: 60rpx;
+}
+
+.history-item text {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 25rpx; /* 添加间距，避免文本挤在一起 */
+}
