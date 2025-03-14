@@ -1,6 +1,8 @@
-#include <ESP8266WiFi.h>
+﻿#include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+
+//3.14 16：26更改
 
 // Wi-Fi 凭据
 const char* ssid = "TP-LINK_029D";          // 您的Wi-Fi名称
@@ -11,7 +13,7 @@ const char* mqtt_server = "mqtts.heclouds.com"; // OneNet MQTT地址
 const int mqtt_port = 1883;                      // 未加密端口
 const char* product_id = "3VQ6EZjF8b";          // 产品ID
 const char* device_name = "ESP8266";          // 设备名称
-const char* api_key = "version=2018-10-31&res=products%2F3VQ6EZjF8b%2Fdevices%2FESP8266&et=1741882180&method=md5&sign=s%2FDNKfduRo9%2BN1EbOPB1Kg%3D%3D"; // 替换为您的API Key  **请替换为您的API Key**
+const char* api_key = "version=2018-10-31&res=products%2F3VQ6EZjF8b%2Fdevices%2FESP8266&et=1837255523&method=md5&sign=rF%2BYg2QXYB3hz56G1WWE2Q%3D%3D"; // 替换为您的API Key  **请替换为您的API Key**
 
 // 定义发布和订阅主题
 String pub_topic = "$sys/" + String(product_id) + "/" + String(device_name) + "/dp/post/json";
@@ -51,6 +53,7 @@ void setup_wifi() {
 // 连接OneNet MQTT
 void reconnect() {
   while (!client.connected()) {
+    Serial.print("串口正常》》》》》");
     Serial.print("尝试连接 MQTT...");
     String clientId = "ESP8266"; // 固定 Client ID
     String username = product_id;

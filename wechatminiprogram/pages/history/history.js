@@ -14,7 +14,7 @@ Page({
       method: 'GET',
       header: {
         'Accept': 'application/json, text/plain, */*',
-        'authorization': 'version=2018-10-31&res=products%2F3VQ6EZjF8b%2Fdevices%2FESP8266&et=1741882180&method=md5&sign=s%2FDNKfduRo9%2BN1EbOPB1Kg%3D%3D'
+        'authorization': 'version=2022-05-01&res=userid%2F426691&et=1741943453&method=sha1&sign=s7HLTGAVHhDhy0tpVEKZFyY9%2FLo%3D'
       },
       data: {
         product_id: '3VQ6EZjF8b',

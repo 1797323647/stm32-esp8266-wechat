@@ -95,7 +95,7 @@ Page({
       url: 'http://iot-api.heclouds.com/datapoint/current-datapoints?product_id=3VQ6EZjF8b&device_name=ESP8266',
       method: 'GET',
       header: {
-        'Authorization': 'version=2018-10-31&res=products%2F3VQ6EZjF8b%2Fdevices%2FESP8266&et=1741882180&method=md5&sign=s%2FDNKfduRo9%2BN1EbOPB1Kg%3D%3D'
+        'Authorization': 'version=2022-05-01&res=userid%2F426691&et=1741943453&method=sha1&sign=s7HLTGAVHhDhy0tpVEKZFyY9%2FLo%3D'
       },
       data: {
         'datastream_ids': 'dis_hr,dis_spo2,AX,AY,AZ,GX,GY,GZ'
