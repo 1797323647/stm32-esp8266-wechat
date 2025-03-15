@@ -14,7 +14,7 @@ Page({
       method: 'GET',
       header: {
         'Accept': 'application/json, text/plain, */*',
-        'authorization': 'version=2022-05-01&res=userid%2F426691&et=1741943453&method=sha1&sign=s7HLTGAVHhDhy0tpVEKZFyY9%2FLo%3D'
+        'authorization': 'version=2022-05-01&res=userid%2F426691&et=1745638586&method=sha1&sign=5kWg%2B8w3cAUCTeLG5yPc4ZOQ5Ro%3D'
       },
       data: {
         product_id: '3VQ6EZjF8b',
