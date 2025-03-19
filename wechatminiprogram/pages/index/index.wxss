@@ -69,9 +69,21 @@
   color: green;                /* 绿色字体 */
   font-weight: bold;           /* 加粗 */
 }
+.back {
+  width: 200rpx;
+  height: 65rpx;
+  background-color: #ff00bf57; /* 粉色背景，与标题和 AI 按钮一致 */
+  color: #ffffff;             /* 白色文字 */
+  font-size: 26rpx;           /* 字体大小 */
+  border-radius: 10rpx;       /* 圆角 */
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* 文字居中 */
+  margin-left: 5rpx;
+}
 /* 历史记录按钮样式 */
 /* 历史记录按钮样式 */
-.history-button {
+/* .history-button {
   width: 200rpx;
   height: 60rpx;
   background-color: #ff00bf57;
@@ -81,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 /* AI 部分样式 */
 .ai-section {
   margin-top: -10rpx;

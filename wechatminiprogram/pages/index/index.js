@@ -95,7 +95,7 @@ Page({
       url: 'http://iot-api.heclouds.com/datapoint/current-datapoints?product_id=3VQ6EZjF8b&device_name=ESP8266',
       method: 'GET',
       header: {
-        'Authorization': 'version=2022-05-01&res=userid%2F426691&et=1745638586&method=sha1&sign=5kWg%2B8w3cAUCTeLG5yPc4ZOQ5Ro%3D'
+        'Authorization': 'version=2022-05-01&res=userid%2F426691&et=1752840963&method=sha1&sign=XOF0ENNxegM0xBiqF7ooo%2BQoqdw%3D'
       },
       // data: {
       //   'datastream_ids': 'dis_hr,dis_spo2,AX,AY,AZ,GX,GY,GZ'
@@ -187,6 +187,11 @@ Page({
           duration: 2000
         });
       }
+    });
+  },
+  openWeb: function () {
+    wx.navigateTo({
+      url: '/pages/webview/webview?url=https://open.iot.10086.cn/console/device/manage/2430343943/dataStream'
     });
   },
 })

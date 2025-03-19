@@ -53,12 +53,25 @@
     </view>
     
     <!-- 第五行：活动状态（高亮绿色） -->
-    <view class="row row-last">
+    <!-- <view class="row row-last">
       <view class="item">
         <text class="label">状态: </text>
         <text class="value status-value">{{activityStatus}}</text>
       </view>
     </view>
+  </view>
+</view> -->
+
+<view class="row">
+      <view class="item">
+        <text class="label">状态:</text>
+        <text class="value status-value">{{activityStatus}}</text>
+      </view>
+      <view class="item">
+        <button class="back" bindtap="openWeb">详细信息</button>
+      </view>
+    </view>
+
   </view>
 </view>
 
